@@ -1,0 +1,21 @@
+.contakts-header {
+  padding-left: column(2);
+}
+
+.contakts-header__item {
+  display:flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.contakts-header__phone {
+  color: $text-color;
+  font-weight: $font-bold;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+

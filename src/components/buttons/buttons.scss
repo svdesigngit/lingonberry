@@ -1,22 +1,28 @@
 .btn {
-    padding: 18px 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rhythm(4.5) rhythm(9);
     border: thin solid $black;
-    font-weight: $fontBold;
+    border-radius: 0;
+    font-weight: $font-regular;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     line-height: 1em;
     background-color: $white;
     font-size: 1.2rem;
     text-decoration: none;
-    color: $black;
+    color: $text-color;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    @include transition(all);
+    @include transition();
 
     &:hover {
-        background-color: $color-brand;
+        background-color: $color-main;
+        border-color: $color-main;
         color: $white;
         text-decoration: none;
+        cursor: pointer;
     }
 }

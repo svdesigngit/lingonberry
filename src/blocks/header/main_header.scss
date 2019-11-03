@@ -1,9 +1,9 @@
 .main-header {
-
+  padding-top: rhythm(3);
 }
 
 .main-header__inner {
     display: flex;
-    width: 1200px;
+    width: column(28);
     margin: 0 auto;
 }

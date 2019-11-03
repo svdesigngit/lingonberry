@@ -218,13 +218,13 @@ summary {
 }
 
 *::-moz-selection {
-  background-color: rgba(252, 114, 121, 0.9);
-  color: #ebebeb;
+  background-color: rgba(229, 229, 229, 0.9);
+  color: #FFFFFF;
 }
 
 *::selection {
-  background-color: rgba(252, 114, 121, 0.9);
-  color: #ebebeb;
+  background-color: rgba(229, 229, 229, 0.9);
+  color: #FFFFFF;
 }
 
 html {
@@ -263,30 +263,30 @@ h1 {
 
 @media only screen and (min-width: 1280px) {
   h1 {
-    font-size: 5.4rem;
+    font-size: 4.5rem;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   h1 {
-    font-size: 5.4rem;
+    font-size: 5.5rem;
   }
 }
 
 @media only screen and (min-width: 1920px) {
   h1 {
-    font-size: 7.2rem;
+    font-size: 5.5rem;
   }
 }
 
 @media only screen and (min-width: 2560px) {
   h1 {
-    font-size: 9.5rem;
+    font-size: 6rem;
   }
 }
 
 h2 {
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   line-height: 1.3em;
   color: #222222;
   font-weight: 700;
@@ -294,84 +294,41 @@ h2 {
 
 @media only screen and (min-width: 768px) {
   h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  h2 {
     font-size: 2.6rem;
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  h2 {
-    font-size: 3.2rem;
-  }
-}
-
 @media only screen and (min-width: 1280px) {
   h2 {
-    font-size: 4.4rem;
+    font-size: 2.8rem;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   h2 {
-    font-size: 4.4rem;
+    font-size: 3rem;
   }
 }
 
 @media only screen and (min-width: 1920px) {
   h2 {
-    font-size: 4.4rem;
+    font-size: 3.6rem;
   }
 }
 
 @media only screen and (min-width: 2560px) {
   h2 {
-    font-size: 4.4rem;
+    font-size: 4rem;
   }
 }
 
 h3 {
-  font-size: 2rem;
-  color: #222222;
-  line-height: 1.5em;
-  font-weight: 700;
-}
-
-@media only screen and (min-width: 768px) {
-  h3 {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  h3 {
-    font-size: 2.2rem;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  h3 {
-    font-size: 2.4rem;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  h3 {
-    font-size: 2.4rem;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  h3 {
-    font-size: 3.2rem;
-  }
-}
-
-@media only screen and (min-width: 2560px) {
-  h3 {
-    font-size: 4.2rem;
-  }
-}
-
-h4 {
   font-size: 1.8rem;
   color: #222222;
   line-height: 1.5em;
@@ -379,14 +336,57 @@ h4 {
 }
 
 @media only screen and (min-width: 768px) {
-  h4 {
+  h3 {
     font-size: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  h4 {
+  h3 {
     font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  h3 {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  h3 {
+    font-size: 2.6rem;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  h3 {
+    font-size: 3.4rem;
+  }
+}
+
+h4 {
+  font-size: 1.6rem;
+  color: #222222;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+  h4 {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  h4 {
+    font-size: 1.8rem;
   }
 }
 
@@ -415,49 +415,6 @@ h4 {
 }
 
 h5 {
-  font-size: 1.6rem;
-  color: #222222;
-  line-height: 1.5em;
-  font-weight: 700;
-}
-
-@media only screen and (min-width: 768px) {
-  h5 {
-    font-size: 1.6rem;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  h5 {
-    font-size: 1.8rem;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  h5 {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  h5 {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (min-width: 1920px) {
-  h5 {
-    font-size: 2.4rem;
-  }
-}
-
-@media only screen and (min-width: 2560px) {
-  h5 {
-    font-size: 3.2rem;
-  }
-}
-
-h6 {
   font-size: 1.4rem;
   color: #222222;
   line-height: 1.5em;
@@ -465,38 +422,81 @@ h6 {
 }
 
 @media only screen and (min-width: 768px) {
-  h6 {
-    font-size: 1.6rem;
+  h5 {
+    font-size: 1.4rem;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  h6 {
+  h5 {
     font-size: 1.6rem;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  h6 {
+  h5 {
     font-size: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  h6 {
+  h5 {
     font-size: 2rem;
   }
 }
 
 @media only screen and (min-width: 1920px) {
-  h6 {
+  h5 {
     font-size: 2.2rem;
   }
 }
 
 @media only screen and (min-width: 2560px) {
+  h5 {
+    font-size: 2.4rem;
+  }
+}
+
+h6 {
+  font-size: 1.2rem;
+  color: #222222;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
   h6 {
-    font-size: 3rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  h6 {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  h6 {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  h6 {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  h6 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  h6 {
+    font-size: 2.2rem;
   }
 }
 
@@ -511,7 +511,7 @@ h6 a {
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 165%;
   color: #222222;
 }
@@ -536,19 +536,19 @@ p {
 
 @media only screen and (min-width: 1440px) {
   p {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 
 @media only screen and (min-width: 1920px) {
   p {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 
 @media only screen and (min-width: 2560px) {
   p {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -565,21 +565,21 @@ p {
 a {
   font-weight: 400;
   font-family: "Open Sans", "Arial", sans-serif;
-  color: #F0C444;
+  color: #007B3B;
   text-decoration: none;
 }
 
 a:hover {
-  color: #A37E12;
+  color: #004823;
   text-decoration: underline;
 }
 
 a:active {
-  color: #d1a217;
+  color: #007b3b;
 }
 
 a:focus {
-  color: #8D650D;
+  color: #002f16;
 }
 
 button {
@@ -647,7 +647,7 @@ textarea::-moz-placeholder,
 textarea:-moz-placeholder,
 textarea:-ms-input-placeholder,
 textarea::-webkit-input-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   line-height: 1.4em;
@@ -665,7 +665,7 @@ textarea::-moz-placeholder,
 textarea:-moz-placeholder,
 textarea:-ms-input-placeholder,
 textarea::-webkit-input-placeholder {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   line-height: 1.4em;
@@ -771,7 +771,7 @@ textarea::-webkit-input-placeholder {
   textarea:-moz-placeholder,
   textarea:-ms-input-placeholder,
   textarea::-webkit-input-placeholder {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   input::placeholder,
   input[placeholder],
@@ -784,7 +784,7 @@ textarea::-webkit-input-placeholder {
   textarea:-moz-placeholder,
   textarea:-ms-input-placeholder,
   textarea::-webkit-input-placeholder {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 
@@ -800,7 +800,7 @@ textarea::-webkit-input-placeholder {
   textarea:-moz-placeholder,
   textarea:-ms-input-placeholder,
   textarea::-webkit-input-placeholder {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   input::placeholder,
   input[placeholder],
@@ -813,7 +813,7 @@ textarea::-webkit-input-placeholder {
   textarea:-moz-placeholder,
   textarea:-ms-input-placeholder,
   textarea::-webkit-input-placeholder {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
 
@@ -829,7 +829,7 @@ textarea::-webkit-input-placeholder {
   textarea:-moz-placeholder,
   textarea:-ms-input-placeholder,
   textarea::-webkit-input-placeholder {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
   input::placeholder,
   input[placeholder],
@@ -842,7 +842,7 @@ textarea::-webkit-input-placeholder {
   textarea:-moz-placeholder,
   textarea:-ms-input-placeholder,
   textarea::-webkit-input-placeholder {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -1535,7 +1535,132 @@ button.swiper-pagination-bullet {
 
 .logo {
   width: 100px;
-  height: 100px;
+  height: auto;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 18px 36px;
+  border: thin solid #000000;
+  border-radius: 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  line-height: 1em;
+  background-color: #FFFFFF;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #222222;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+       -o-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.btn:hover {
+  background-color: #007B3B;
+  border-color: #007B3B;
+  color: #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.nav-main__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-main__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-main__item:before {
+  display: none;
+}
+
+.nav-main__link {
+  color: #000000;
+}
+
+.contakts-header {
+  padding-left: 5.55556%;
+}
+
+.contakts-header__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contakts-header__phone {
+  color: #222222;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contakts-header__phone:hover {
+  text-decoration: none;
+}
+
+.main-header {
+  padding-top: 12px;
+}
+
+.main-header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 77.77778%;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=app.css.map */
