@@ -1,5 +1,5 @@
-const path = require('path');
 const config = require('./tasks/config');
+const path = require('path');
 
 module.exports = {
 	mode: process.env.NODE_ENV,
@@ -20,6 +20,13 @@ module.exports = {
 			},
 		]
 	},
+  resolve: {
+    extensions: ['.js', '.json'],
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+      '@utils': path.resolve(__dirname, 'src/assets/scripts/utils/'),
+    }
+  },
 	devServer: {
 		overlay: false
 	}

@@ -1,0 +1,33 @@
+.nav-main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-main__list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-main__item {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    list-style: none;
+    margin: 0;
+
+    &:before {
+        display: none;
+    }
+}
+
+.nav-main__link {
+    color: $black;
+}
+
+.nav-main__item--active {
+
+}

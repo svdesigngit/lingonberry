@@ -1,0 +1,36 @@
+{% if tag %}
+    {% if tag == 'input' %}
+        <input type="submit"
+               class="btn
+                    {{ modify }}
+                    {% if active == true %} btn--active{% endif %}
+                "
+                {{ data_attr }}
+                {% if disabled == true %} disabled {% endif %}
+               value="{{ text }}"
+        >
+    {% else %}
+            <{{ tag }}
+            class="btn
+                {{ modify }}
+                {% if active == true %} btn--active{% endif %}
+            "
+            {{ data_attr }}
+            {% if href %} href="{{ href }}" {% endif %}
+            {% if disabled == true %} disabled {% endif %}
+            >
+            {{ text }}
+            </{{ tag }}>
+    {% endif %}
+{% else %}
+    <button
+            class="btn
+                {{ modify }}
+                {% if active == true %} btn--active{% endif %}
+            "
+            {{ data_attr }}
+            {% if disabled == true %} disabled {% endif %}
+    >
+        {{ text }}
+    </button>
+{% endif %}

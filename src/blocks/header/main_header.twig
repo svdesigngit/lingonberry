@@ -1,0 +1,23 @@
+<header class="main-header">
+    <div class="main-header__inner">
+        {% include '../../components/logo/logo.twig' %}
+        {% include '../../components/nav-main/nav-main.twig' with {
+            items: [
+                {
+                    name: 'О нас',
+                    link: '#',
+                },{
+                    name: 'Цены',
+                    link: '#',
+                },{
+                    name: 'Коттеджи',
+                    link: '#',
+                },{
+                    name: 'Контакты',
+                    link: '#',
+                }
+            ]
+        }%}
+        {% include '../../components/contacts-header/contacts-header.twig' %}
+    </div>
+</header>

@@ -1,11 +1,27 @@
-{% include './layout/head.twig' with {
+{% include '../assets/layout/base.twig' with {
     title: 'Главная',
     meta_d: 'Описание',
     theme_color: '#007B3B'
-}%}
+} %}
+
+{% block body %}
+
+<div class="wrapper">
+    {% include '../blocks/header/main_header.twig' %}
+</div>
+
+{% endblock %}
 
 
-<h1>Привет, я новый сайт, сверстай меня скорей =)</h1>
+
+{% block footer %}
 
 
-{% include './layout/footer.twig' %}
+
+{% endblock %}
+
+
+
+{% block script %}
+
+{% endblock %}

@@ -1,40 +1,34 @@
 // Нормализация
 @import "./normalize";
 
-// Шрифты
-@import "./fonts";
-
 // Переменные
 @import "./variables";
 
 // Функции
-
 @import "./functions";
 
 // Миксины
-@import "./mixins";
+@import "./mixins/mixins";
+@import "./mixins/font-face-generator";
 
-// Теги по умолчанию
+// Breakpoints
+@import './breakpoints';
+
+// Grid
+@import './grid';
+
+// Шрифты
+@import "./fonts";
+
+// Default tags
 @import "./global-tags";
 
-// Шапка
-@import "../../blocks/header/main_header";
-
-// Логотип
-@import "../../components/logo/logo";
-
-// Кнопки
-
-// Формы
-
-// Сайтбар
-
-// Навигация - Выпадающее меню
-
-// Навигация - Левое меню
-
-// Контентный блок
-
-// Слайдер
+// Libs
+@import './libs/swiper.min.scss';
 
 
+// Components
+@import "../../components/components";
+
+// Blocks
+@import "../../blocks/blocks";

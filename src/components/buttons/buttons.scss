@@ -1,0 +1,22 @@
+.btn {
+    padding: 18px 35px;
+    border: thin solid $black;
+    font-weight: $fontBold;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    line-height: 1em;
+    background-color: $white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: $black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @include transition(all);
+
+    &:hover {
+        background-color: $color-brand;
+        color: $white;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,9 @@
+<nav class="nav-main">
+    <ul class="nav-main__list">
+        {% for item in items %}
+            <li class="nav-main__item{% if item.active %} nav-main__item--active{% endif %}">
+                <a href="{{ item.link }}" class="nav-main__link">{{ item.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

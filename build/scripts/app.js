@@ -90,10 +90,27 @@
 /*!***********************************!*\
   !*** ./src/assets/scripts/app.js ***!
   \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_numberFormater_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @utils/numberFormater.js */ "./src/assets/scripts/utils/numberFormater.js");
 
+Object(_utils_numberFormater_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
+/***/ }),
+
+/***/ "./src/assets/scripts/utils/numberFormater.js":
+/*!****************************************************!*\
+  !*** ./src/assets/scripts/utils/numberFormater.js ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (number => number);
 
 /***/ })
 
