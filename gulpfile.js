@@ -30,7 +30,6 @@ if (isDev) {
     ),
     static,
     svgspritehtml,
-    // injects,
     serve
   );
 } else {
@@ -47,6 +46,5 @@ if (isDev) {
     ),
     static,
     svgspritehtml
-    // injects,
   );
 }

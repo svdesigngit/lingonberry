@@ -65,10 +65,14 @@
       <![endif]-->
     </head>
     <body>
-        {{ data.benefits['user']['name'] }}
+        <div id="app">
+            {{ data.benefits['user']['name'] }}
 
-        {% block body %}{% endblock %}
-        {% block footer %}{% endblock %}
+            {% block body %}{% endblock %}
+            {% block footer %}{% endblock %}
+        </div>
+        <script async src="scripts/app.js"></script>
+
         {% block script %}{% endblock %}
     </body>
 </html>

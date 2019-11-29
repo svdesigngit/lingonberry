@@ -1,0 +1,53 @@
+<section class="price">
+    <div class="price__inner">
+        <h2>Наши цены</h2>
+        <table class="price__table">
+            <thead>
+                <tr>
+                    <th>Регулярные предложения</th>
+                    <th>Пакет «Отпуск»</th>
+                    <th>Праздники</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>С сентября по май</td>
+                    <td>Лето</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Сутки</td>
+                    <td>6 500 ₽</td>
+                    <td>12 500 ₽</td>
+                </tr>
+                <tr>
+                    <td>Выходные</td>
+                    <td>12 000 ₽</td>
+                    <td>18 000 ₽</td>
+                </tr>
+                <tr>
+                    <td>Двое суток (понедельник - четверг)</td>
+                    <td>12 000 ₽</td>
+                    <td>17 000 ₽</td>
+                </tr>
+                <tr>
+                    <td>5 дней, 4 ночи (понедельник - пятница)</td>
+                    <td>17 000 ₽</td>
+                    <td>29 000 ₽</td>
+                </tr>
+                <tr>
+                    <td>7 дней, 6 ночей (понедельник - воскресенье)</td>
+                    <td>25 000 ₽</td>
+                    <td>65 000 ₽</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="price__footer">
+            {% include '../../components/buttons/button.twig' with {
+                text: 'Забронировать',
+                modify: 'btn--default',
+                active: true
+            }%}
+        </div>
+    </div>
+</section>

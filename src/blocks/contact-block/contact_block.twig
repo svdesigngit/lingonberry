@@ -1,0 +1,23 @@
+<section class="contact-block">
+    <div class="contact-block__inner">
+        <div class="contact-block__map">
+            {% include '../../components/yandex-map/yandex_map.twig' %}
+        </div>
+        <div class="contact-block__description">
+            <div class="contact-block__text">
+                <p>Коттедж-клуб распологается в сосновом бору на берегу Суходольского озера рядом с поселком Лосево
+                    (Ленинградская область). Это всего в 80 километрах от Санкт-Петербурга на территории охраняемого
+                    коттеджного поселка. По соседству находится база отдыха «Грин Виладж».</p>
+            </div>
+            <div class="contact-block__footer">
+                {% include '../../components/buttons/button.twig' with {
+                    text: 'Проложить маршрут',
+                    modify: 'btn--default',
+                    active: true,
+                    tag: 'a',
+                    href: '#'
+                } %}
+            </div>
+        </div>
+    </div>
+</section>

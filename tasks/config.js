@@ -22,7 +22,10 @@ module.exports = {
     watch: [
       `src/assets/**/*.js`,
       `src/blocks/**/*.js`,
-      `src/components/**/*.js`
+      `src/components/**/*.js`,
+      `src/assets/**/*.vue`,
+      `src/blocks/**/*.vue`,
+      `src/components/**/*.vue`
     ],
     output: resolve(__dirname, '../build/scripts')
   },

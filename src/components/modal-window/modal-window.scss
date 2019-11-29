@@ -1,0 +1,65 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba($black, .5);
+
+  &.active {
+    display: flex;
+  }
+}
+
+.modal__close {
+  @include transition();
+
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  border: none;
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  background: none;
+  background-color: rgba($white, .7);
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 15px;
+    height: 2px;
+    margin: auto;
+    background-color: $gray-dark;
+    transform-origin: center;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    background-color: rgba($white, 1);
+  }
+}
+
+.modal__content {
+  padding: 40px;
+  background-color: $white;
+}

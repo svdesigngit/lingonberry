@@ -1,0 +1,30 @@
+<section class="content-about">
+    <h2>Удивительная Брусника</h2>
+    {% include '../../components/content-block/content-block.twig' with {
+        header: 'В поселке Лосево',
+        text: '<p>Коттедж-клуб находится в сосновом бору недалеко от Суходольского озера.</p>
+                   <p>Все коттеджи оборудованы сауной и собственной кухней и отлично подойдут для
+                   отдыха большой компанией.</p>',
+        img: 'img/about_1.jpg',
+        decor: {
+            img: 'img/decor_lingonberry.png'
+        },
+        button: {
+            name: 'Узнать больше'
+        }
+    } %}
+    {% include '../../components/content-block/content-block.twig' with {
+        header: 'Отдых и развлечения круглый год',
+        modify: 'content-block_revers',
+        text: '<p>На прилегающей к коттеджам территории можно провести барбекю-вечеринку или корпоратив.
+        Место прекрасно подойдет и для романтического пикника, отдыха c детьми или спокойной прогулки
+        в тени деревьев. Клуб имеет собственный пляж на берегу Суходольского озера (до берега 350 м). </p>',
+        img: 'img/about_2.jpg',
+        decor: {
+            img: 'img/decor_cones.png'
+        },
+        button: {
+            name: 'Забронировать'
+        }
+    } %}
+</section>

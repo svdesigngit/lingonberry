@@ -1,17 +1,23 @@
 {% if tag %}
     {% if tag == 'input' %}
         <input type="submit"
-               class="btn
-                    {{ modify }}
-                    {% if active == true %} btn--active{% endif %}
-                "
-                {{ data_attr }}
-                {% if disabled == true %} disabled {% endif %}
-               value="{{ text }}"
+            {% if vue %}
+                {{ vue }}
+            {% endif %}
+            class="btn
+                {{ modify }}
+                {% if active == true %} btn--active{% endif %}
+            "
+            {{ data_attr }}
+            {% if disabled == true %} disabled {% endif %}
+           value="{{ text }}"
         >
     {% else %}
             <{{ tag }}
-            class="btn
+            {% if vueClick %}
+                @click="{{ vueClick }}"
+            {% endif %}
+        class="btn
                 {{ modify }}
                 {% if active == true %} btn--active{% endif %}
             "
@@ -24,9 +30,14 @@
     {% endif %}
 {% else %}
     <button
+            {% if vueClick %}
+                @click="{{ vueClick }}"
+            {% endif %}
             class="btn
                 {{ modify }}
-                {% if active == true %} btn--active{% endif %}
+                {% if active == true %}
+                 btn--active
+                {% endif %}
             "
             {{ data_attr }}
             {% if disabled == true %} disabled {% endif %}

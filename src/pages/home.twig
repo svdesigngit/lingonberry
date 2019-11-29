@@ -1,22 +1,85 @@
-{% include '../assets/layout/base.twig' with {
-    title: 'Главная',
-    meta_d: 'Описание',
-    theme_color: '#007B3B'
-} %}
+{% extends '../assets/layout/base.twig' %}
 
 {% block body %}
+    {% set title = 'Главная - home' %}
+    {% set meta_d = 'Описание' %}
+    {% set theme_color = '#007B3B' %}
 
 <div class="wrapper">
     {% include '../blocks/header/main_header.twig' %}
-    {% include '../components/promo/promo.twig' %}
+    {% include '../components/promo/promo.twig' with {
+        slides: [
+            {
+                header: 'Лучший отдых на природе',
+                description: 'Вместе с загородным коттедж-клубом Брусника',
+                img: 'img/1.jpg',
+                button: {
+                    name: 'Забронировть'
+                }
+            },
+            {
+                header: 'Лучший отдых на природе',
+                description: 'Вместе с загородным коттедж-клубом Брусника',
+                img: 'img/2.jpg',
+                button: {
+                    name: 'Забронировть'
+                }
+            }
+        ]
+    }%}
+    {% include '../blocks/content-about/content_about.twig' %}
+    {% include '../blocks/content-entertainment/content_entertainment.twig' %}
+    {% include '../blocks/price/price.twig' %}
+    {% include '../blocks/content-property/content_property.twig' %}
+    {% include '../blocks/contact-block/contact_block.twig' %}
 </div>
 
-{% endblock %}
+{% endblock%}
 
 
 
 {% block footer %}
 
+{#    {% include '../components/modal-window/modal-window.twig' %}#}
+    <button @click="openPopup('modalForm')">открыть попап</button>
+    <button @click="openPopup('modalText')">открыть попап</button>
+    <button @click="openPopup('modalImage')">открыть попап</button>
+    <modal-window ref="modalForm">
+        <template slot="title" slot-scope="className1">Форма обратной связи  {{ className1 }}</template>
+        <template slot="body">
+            <form action="" @submit.prevent>
+                <p :class="{ error:$v.form.age.$error }">
+                    <input type="text" v-model="age" @blur="$v.form.age.$touch()">
+                    <span v-if="$v.form.age.$error">Errrrrrrroooooooor</span>
+                </p>
+
+                <div>
+                    <input type="text" v-model="name">
+                    <span v-if="$v.form.name.$error">Errrrrrrroooooooor</span>
+                </div>
+                <div>
+                    <input type="text" v-model="email">
+                    <span v-if="$v.form.email.$error">Errrrrrrroooooooor</span>
+                </div>
+                <div>
+                    <input type="text" v-model="phone">
+                    <span v-if="$v.form.phone.$error">Errrrrrrroooooooor</span>
+                </div>
+                <button @click="$v.form.$touch()">отправить</button>
+                <button @click="$v.form.$reset()">reset</button>
+            </form>
+        </template>
+    </modal-window>
+    <modal-window ref="modalText">
+        <template slot="title">Текстовый попап</template>
+        <template slot="body">Дофига текста</template>
+    </modal-window>
+    <modal-window ref="modalImage">
+        <template slot="title">Галерея</template>
+        <template slot="body">Картинки</template>
+    </modal-window>
+
+    {% include '../blocks/footer/main_footer.twig' %}
 
 {% endblock %}
 

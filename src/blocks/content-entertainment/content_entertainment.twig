@@ -1,0 +1,40 @@
+<section class="content-entertainment">
+    <h2>Как весело провести время?</h2>
+    {% include '../../components/content-block/content-block.twig' with {
+        header: 'Спорт и активный отдых',
+        text: '<p>С апреля по октябрь проводятся регулярные сплавы на рафтах, катамаранах и байдарках
+        по Лосевскому порогу. Маршруты посложнее и поопаснее — для бывалых водников, поспокойнее — для новичков.
+        Можно взять в  прокат велосипеды.</p>',
+        img: 'img/rafting.jpg'
+    } %}
+    {% include '../../components/content-block/content-block.twig' with {
+        header: 'Рестораны',
+        modify: 'content-block_revers',
+        text: '<p>Ближайший к нам ресторан расположен на территории базы отдыха "Грин Виладж".
+        Несколько ресторанчиков и кафе расположены в поселке Лосево (5 км.) от наших коттеджей.</p>',
+        img: 'img/restoran.jpg',
+        footerModify: 'content-block__footer_revers',
+        decor: {
+            img: 'img/decor_blueberry.png',
+            modify: 'content-block__decor_left'
+        }
+    } %}
+    {% include '../../components/content-block/content-block.twig' with {
+        header: 'Домик-клуб',
+        text: '<p>На территории клуба есть домик, в котором гости могут весело провести время:
+        поиграть в настольный теннис, настольные игры или дартс. Все это бесплатно для всех коттеджей
+        (лимит по времени 3 часа в день).</p>',
+        img: 'img/club.jpg',
+        decor: {
+            img: 'img/decor_cramberry.png'
+        }
+    } %}
+    {% include '../../components/content-block/content-block.twig' with {
+        header: 'Рыбалка',
+        modify: 'content-block_revers',
+        text: '<p>Рыбные богатства Вуоксинской озерной системы кажутся неистощимыми.
+        В ней можно поймать крупную рыбу. Рыбаки-любители здесь могут поживиться лещом, плотвой, щукой,
+        а зимой еще и налимом. Водятся также уклейка, ерш, окунь, язь, судак.</p>',
+        img: 'img/fishing.jpg'
+    } %}
+</section>

@@ -1,0 +1,22 @@
+.contact-block {
+  padding: rhythm(20) 0;
+  background-color: $gray-lightest;
+}
+
+.contact-block__inner {
+  @include column(28);
+  margin: 0 auto;
+  display: flex;
+}
+
+.contact-block__map {
+  @include column(16.5);
+}
+
+.contact-block__description {
+  @include column(16.5);
+}
+
+.contact-block__footer {
+  padding-top: rhythm(8);
+}

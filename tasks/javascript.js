@@ -10,8 +10,6 @@ const javascript = cb => {
     .pipe(plumber(config.notify))
     .pipe(webpack(webpackConfig))
     .pipe(dest(config.scripts.output));
-
-  // cb();
 };
 
 exports.javascript = javascript;

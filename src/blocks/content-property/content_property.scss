@@ -1,0 +1,26 @@
+.content-property {
+  padding: rhythm(20) 0;
+}
+
+.content-property__inner {
+  @include column(28);
+  margin: 0 auto;
+}
+
+.content-property__text {
+  @include column(17);
+  @include font-size('small');
+}
+
+.content-property__description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-property__col {
+  @include column(16.5);
+}
+
+.content-property__footer {
+  padding-top: rhythm(10);
+}

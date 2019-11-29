@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная</title>
+    <title>Главная - home</title>
     <meta name="description" content="Описание" />
     <meta name="theme-color" content="#007B3B">
     <meta name="application-name" content="">
@@ -17,7 +17,7 @@
     <meta name="image" content="/themes/cover.png" />
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="">
-    <meta property="og:title" content="Главная">
+    <meta property="og:title" content="Главная - home">
     <meta property="og:description" content="Описание">
     <meta property="og:url" content="">
     <meta property="og:locale" content="ru_RU">
@@ -25,7 +25,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Главная">
+    <meta name="twitter:title" content="Главная - home">
     <meta name="twitter:description" content="Описание">
     <meta name="twitter:image:src" content="/themes/cover.png">
     <meta name="twitter:url" content="">
@@ -60,6 +60,367 @@
 </head>
 
 <body>
+    <div id="app">
+
+
+
+        <div class="wrapper">
+            <header class="main-header">
+                <div class="main-header__inner">
+                    <a href="" class="logo">
+                        <img src="../img/logo.png" alt="">
+                    </a>
+                    <nav class="nav-main">
+                        <ul class="nav-main__list">
+                            <li class="nav-main__item">
+                                <a href="#" class="nav-main__link">О нас</a>
+                            </li>
+                            <li class="nav-main__item">
+                                <a href="#" class="nav-main__link">Цены</a>
+                            </li>
+                            <li class="nav-main__item">
+                                <a href="#" class="nav-main__link">Коттеджи</a>
+                            </li>
+                            <li class="nav-main__item">
+                                <a href="#" class="nav-main__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="contakts-header">
+                        <div class="contakts-header__item">
+                            <a href="tel:+79817000170" class="contakts-header__phone">+7 (981) 700-01-70</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="promo">
+                <div class="promo__slider">
+                    <hooper>
+                        <slide>
+                            <div class="promo__slider-item">
+                                <div class="promo__slider-img">
+                                    <img src="img/1.jpg" alt="Лучший отдых на природе">
+                                </div>
+                                <div class="promo__slider-caption">
+                                    <h2 class="promo__slider-header">Лучший отдых на природе</h2>
+                                    <div class="promo__slider-text">Вместе с загородным коттедж-клубом Брусника</div>
+                                    <button @click="openPopup('modalForm')" class="btn
+                btn--promo
+                 btn--active            ">
+                                        Забронировть
+                                    </button>
+                                </div>
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="promo__slider-item">
+                                <div class="promo__slider-img">
+                                    <img src="img/2.jpg" alt="Лучший отдых на природе">
+                                </div>
+                                <div class="promo__slider-caption">
+                                    <h2 class="promo__slider-header">Лучший отдых на природе</h2>
+                                    <div class="promo__slider-text">Вместе с загородным коттедж-клубом Брусника</div>
+                                    <button @click="openPopup('modalForm')" class="btn
+                btn--promo
+                 btn--active            ">
+                                        Забронировть
+                                    </button>
+                                </div>
+                            </div>
+                        </slide>
+                    </hooper>
+                </div>
+            </section>
+            <section class="content-about">
+                <h2>Удивительная Брусника</h2>
+                <article class="content-block ">
+                    <div class="content-block__img">
+                        <img src="img/about_1.jpg" alt="В поселке Лосево">
+                    </div>
+                    <div class="content-block__description">
+                        <h3 class="content-block__header">В поселке Лосево</h3>
+                        <div class="content-block__text">
+                            <p>Коттедж-клуб находится в сосновом бору недалеко от Суходольского озера.</p>
+                            <p>Все коттеджи оборудованы сауной и собственной кухней и отлично подойдут для
+                                отдыха большой компанией.</p>
+                        </div>
+                        <div class="content-block__footer ">
+                            <a class="btn
+                btn--default
+                 btn--active            " href="#">
+                                Узнать больше
+                            </a>
+                            <div class="content-block__decor">
+                                <img src="img/decor_lingonberry.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="content-block content-block_revers">
+                    <div class="content-block__img">
+                        <img src="img/about_2.jpg" alt="Отдых и развлечения круглый год">
+                    </div>
+                    <div class="content-block__description">
+                        <h3 class="content-block__header">Отдых и развлечения круглый год</h3>
+                        <div class="content-block__text">
+                            <p>На прилегающей к коттеджам территории можно провести барбекю-вечеринку или корпоратив.
+                                Место прекрасно подойдет и для романтического пикника, отдыха c детьми или спокойной прогулки
+                                в тени деревьев. Клуб имеет собственный пляж на берегу Суходольского озера (до берега 350 м). </p>
+                        </div>
+                        <div class="content-block__footer ">
+                            <a class="btn
+                btn--default
+                 btn--active            " href="#">
+                                Забронировать
+                            </a>
+                            <div class="content-block__decor">
+                                <img src="img/decor_cones.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section class="content-entertainment">
+                <h2>Как весело провести время?</h2>
+                <article class="content-block ">
+                    <div class="content-block__img">
+                        <img src="img/rafting.jpg" alt="Спорт и активный отдых">
+                    </div>
+                    <div class="content-block__description">
+                        <h3 class="content-block__header">Спорт и активный отдых</h3>
+                        <div class="content-block__text">
+                            <p>С апреля по октябрь проводятся регулярные сплавы на рафтах, катамаранах и байдарках
+                                по Лосевскому порогу. Маршруты посложнее и поопаснее — для бывалых водников, поспокойнее — для новичков.
+                                Можно взять в прокат велосипеды.</p>
+                        </div>
+                        <div class="content-block__footer ">
+                        </div>
+                    </div>
+                </article>
+                <article class="content-block content-block_revers">
+                    <div class="content-block__img">
+                        <img src="img/restoran.jpg" alt="Рестораны">
+                    </div>
+                    <div class="content-block__description">
+                        <h3 class="content-block__header">Рестораны</h3>
+                        <div class="content-block__text">
+                            <p>Ближайший к нам ресторан расположен на территории базы отдыха "Грин Виладж".
+                                Несколько ресторанчиков и кафе расположены в поселке Лосево (5 км.) от наших коттеджей.</p>
+                        </div>
+                        <div class="content-block__footer content-block__footer_revers">
+                            <div class="content-block__decorcontent-block__decor_left">
+                                <img src="img/decor_blueberry.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="content-block ">
+                    <div class="content-block__img">
+                        <img src="img/club.jpg" alt="Домик-клуб">
+                    </div>
+                    <div class="content-block__description">
+                        <h3 class="content-block__header">Домик-клуб</h3>
+                        <div class="content-block__text">
+                            <p>На территории клуба есть домик, в котором гости могут весело провести время:
+                                поиграть в настольный теннис, настольные игры или дартс. Все это бесплатно для всех коттеджей
+                                (лимит по времени 3 часа в день).</p>
+                        </div>
+                        <div class="content-block__footer ">
+                            <div class="content-block__decor">
+                                <img src="img/decor_cramberry.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="content-block content-block_revers">
+                    <div class="content-block__img">
+                        <img src="img/fishing.jpg" alt="Рыбалка">
+                    </div>
+                    <div class="content-block__description">
+                        <h3 class="content-block__header">Рыбалка</h3>
+                        <div class="content-block__text">
+                            <p>Рыбные богатства Вуоксинской озерной системы кажутся неистощимыми.
+                                В ней можно поймать крупную рыбу. Рыбаки-любители здесь могут поживиться лещом, плотвой, щукой,
+                                а зимой еще и налимом. Водятся также уклейка, ерш, окунь, язь, судак.</p>
+                        </div>
+                        <div class="content-block__footer ">
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section class="price">
+                <div class="price__inner">
+                    <h2>Наши цены</h2>
+                    <table class="price__table">
+                        <thead>
+                            <tr>
+                                <th>Регулярные предложения</th>
+                                <th>Пакет «Отпуск»</th>
+                                <th>Праздники</th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>С сентября по май</td>
+                                <td>Лето</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Сутки</td>
+                                <td>6 500 ₽</td>
+                                <td>12 500 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Выходные</td>
+                                <td>12 000 ₽</td>
+                                <td>18 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>Двое суток (понедельник - четверг)</td>
+                                <td>12 000 ₽</td>
+                                <td>17 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>5 дней, 4 ночи (понедельник - пятница)</td>
+                                <td>17 000 ₽</td>
+                                <td>29 000 ₽</td>
+                            </tr>
+                            <tr>
+                                <td>7 дней, 6 ночей (понедельник - воскресенье)</td>
+                                <td>25 000 ₽</td>
+                                <td>65 000 ₽</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="price__footer">
+                        <button class="btn
+                btn--default
+                                 btn--active
+                            ">
+                            Забронировать
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="content-property">
+                <div class="content-property__inner">
+                    <h2>Что у нас есть</h2>
+                    <div class="content-property__text">
+                        <p>На территории коттедж-клуба к вашим услугам 6 коттеджей и домик-клуб. Все коттеджи совершенно одинаковые
+                            по планировке и внешнему виду.</p>
+                    </div>
+                    <div class="content-property__description">
+                        <div class="content-property__col">
+                            <h3>На первом этаже:</h3>
+                            <ul>
+                                <li>Прихожая с гардеробом оборудована теплым полом</li>
+                                <li>Одна спальная комната</li>
+                                <li>Ванная комната</li>
+                                <li>Кухня</li>
+                            </ul>
+                        </div>
+                        <div class="content-property__col">
+                            <h3>На втором этаже:</h3>
+                            <ul>
+                                <li>Две спальных комнаты</li>
+                            </ul>
+                            <h3>Рядом с каждым домиком расположены: </h3>
+                            <ul>
+                                <li>Мангал</li>
+                                <li>Беседка</li>
+                                <li>Парковочные места для двух автомобилей</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="content-property__footer">
+                        <a class="btn
+                btn--default
+                 btn--active            " href="#">
+                            Узнать больше
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="contact-block">
+                <div class="contact-block__inner">
+                    <div class="contact-block__map">
+                    </div>
+                    <div class="contact-block__description">
+                        <div class="contact-block__text">
+                            <p>Коттедж-клуб распологается в сосновом бору на берегу Суходольского озера рядом с поселком Лосево
+                                (Ленинградская область). Это всего в 80 километрах от Санкт-Петербурга на территории охраняемого
+                                коттеджного поселка. По соседству находится база отдыха «Грин Виладж».</p>
+                        </div>
+                        <div class="contact-block__footer">
+                            <a class="btn
+                btn--default
+                 btn--active            " href="#">
+                                Проложить маршрут
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+
+        <button @click="openPopup('modalForm')">открыть попап</button>
+        <button @click="openPopup('modalText')">открыть попап</button>
+        <button @click="openPopup('modalImage')">открыть попап</button>
+        <modal-window ref="modalForm">
+            <template slot="title" slot-scope="className1">Форма обратной связи </template>
+            <template slot="body">
+                <form action="" @submit.prevent>
+                    <p :class="{ error:$v.form.age.$error }">
+                        <input type="text" v-model="age" @blur="$v.form.age.$touch()">
+                        <span v-if="$v.form.age.$error">Errrrrrrroooooooor</span>
+                    </p>
+
+                    <div>
+                        <input type="text" v-model="name">
+                        <span v-if="$v.form.name.$error">Errrrrrrroooooooor</span>
+                    </div>
+                    <div>
+                        <input type="text" v-model="email">
+                        <span v-if="$v.form.email.$error">Errrrrrrroooooooor</span>
+                    </div>
+                    <div>
+                        <input type="text" v-model="phone">
+                        <span v-if="$v.form.phone.$error">Errrrrrrroooooooor</span>
+                    </div>
+                    <button @click="$v.form.$touch()">отправить</button>
+                    <button @click="$v.form.$reset()">reset</button>
+                </form>
+            </template>
+        </modal-window>
+        <modal-window ref="modalText">
+            <template slot="title">Текстовый попап</template>
+            <template slot="body">Дофига текста</template>
+        </modal-window>
+        <modal-window ref="modalImage">
+            <template slot="title">Галерея</template>
+            <template slot="body">Картинки</template>
+        </modal-window>
+
+        <footer class="main-footer">
+            <div class="main-footer__inner">
+                <div class="main-footer__nav"></div>
+                <div class="main-footer__contact">
+                    <div class="main-footer__item">
+                        <a href="tel:+79817000170" class="main-footer__phone">+7 (981) 700-01-70</a>
+                        <div class="main-footer__address">77 км. Приозерского шоссе, бывшая база отдыха "Климовец" 1</div>
+                    </div>
+                </div>
+                <div class="main-footer__copyright">
+                    <div class="main-footer__copyright-lingonberry"> © Брусника 2019</div>
+                    <div class="main-footer__copyright-dev">designed by <a href="#">Anna Piskovaya</a></div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script async src="scripts/app.js"></script>
 
 
 </body>

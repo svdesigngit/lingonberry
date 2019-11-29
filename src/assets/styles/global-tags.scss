@@ -30,7 +30,7 @@ h1 {
 
   color: $text-color;
   line-height: 1.25em;
-  font-weight: $font-bold;
+  font-weight: $font-regular;
 }
 
 h2 {
@@ -38,7 +38,7 @@ h2 {
 
   line-height: 1.3em;
   color: $text-color;
-  font-weight: $font-bold;
+  font-weight: $font-regular;
 }
 
 h3 {
@@ -46,7 +46,7 @@ h3 {
 
   color: $text-color;
   line-height: 1.5em;
-  font-weight: $font-bold;
+  font-weight: $font-regular;
 }
 
 h4 {
@@ -54,7 +54,7 @@ h4 {
 
   color: $text-color;
   line-height: 1.5em;
-  font-weight: $font-bold;
+  font-weight: $font-regular;
 }
 
 h5 {
@@ -62,7 +62,7 @@ h5 {
 
   color: $text-color;
   line-height: 1.5em;
-  font-weight: $font-bold;
+  font-weight: $font-regular;
 }
 
 h6 {
@@ -70,7 +70,7 @@ h6 {
 
   color: $text-color;
   line-height: 1.5em;
-  font-weight: $font-bold;
+  font-weight: $font-regular;
 }
 
 h1,
@@ -143,11 +143,33 @@ button {
   }
 }
 
+//ul {
+//  @include list-normalize;
+//
+//  li {
+//    @include list-li-normalize;
+//  }
+//}
 ul {
   @include list-normalize;
 
   li {
-    @include list-li-normalize;
+    position: relative;
+    padding: rhythm(1) 0 rhythm(1) rhythm(4);
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 4px;
+      height: 4px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      margin: auto 0;
+      border-radius: 50%;
+      background-color: $gray-samidark;
+    }
   }
 }
 

@@ -1,0 +1,11 @@
+.main-footer {
+  padding-top: rhythm(3);
+  background-color: $gray-darken;
+  padding: rhythm(15) 0;
+}
+
+.main-footer__inner {
+  display: flex;
+  width: column(28);
+  margin: 0 auto;
+}

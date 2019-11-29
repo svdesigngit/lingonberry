@@ -1,0 +1,66 @@
+.price {
+  padding: rhythm(20) 0;
+  background-color: $gray-lightest;
+}
+
+.price__inner {
+  @include column(28);
+  margin: 0 auto;
+}
+
+.price__table{
+  width: 100%;
+
+  thead {
+    th {
+      @include font-size(h5);
+      padding: rhythm(5) 0;
+    }
+    tr:last-child {
+      background-color: $gray-light;
+
+      td,
+      th {
+        @include font-size(small);
+        padding: rhythm(2) 0;
+        border-bottom: rhythm(2) solid $gray-lightest;
+        text-align: center;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      @include transition(background-color);
+
+      td {
+        padding: rhythm(4) rhythm(5);
+        text-align: center;
+
+        &:first-child {
+          text-align: left;
+        }
+      }
+    }
+
+    tr:nth-child(odd) {
+      background-color: $white;
+    }
+
+    tr:hover {
+      background-color: rgba($color-main, .3);
+    }
+  }
+
+  @media #{$tablet-landscape} {
+    @include column(20, 28);
+  }
+
+  @media #{$desktop} {
+    @include column(15, 28);
+  }
+}
+
+.price__footer {
+  padding-top: rhythm(10);
+}
