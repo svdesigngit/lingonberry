@@ -1,47 +1,72 @@
 <section class="price">
     <div class="price__inner">
         <h2>Наши цены</h2>
-        <table class="price__table">
-            <thead>
-                <tr>
-                    <th>Регулярные предложения</th>
-                    <th>Пакет «Отпуск»</th>
-                    <th>Праздники</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>С сентября по май</td>
-                    <td>Лето</td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Сутки</td>
-                    <td>6 500 ₽</td>
-                    <td>12 500 ₽</td>
-                </tr>
-                <tr>
-                    <td>Выходные</td>
-                    <td>12 000 ₽</td>
-                    <td>18 000 ₽</td>
-                </tr>
-                <tr>
-                    <td>Двое суток (понедельник - четверг)</td>
-                    <td>12 000 ₽</td>
-                    <td>17 000 ₽</td>
-                </tr>
-                <tr>
-                    <td>5 дней, 4 ночи (понедельник - пятница)</td>
-                    <td>17 000 ₽</td>
-                    <td>29 000 ₽</td>
-                </tr>
-                <tr>
-                    <td>7 дней, 6 ночей (понедельник - воскресенье)</td>
-                    <td>25 000 ₽</td>
-                    <td>65 000 ₽</td>
-                </tr>
-            </tbody>
-        </table>
+
+        <div class="price__table">
+            <h3>Регулярные предложения</h3>
+{#            <div class="price__header">#}
+{#                <div class="price__header-item">С сентября по май</div>#}
+{#                <div class="price__header-item">Лето</div>#}
+{#            </div>#}
+            <div class="price__list">
+                <div class="price__item">
+                    <div class="price__name">Сутки</div>
+                    <div class="price__value price__value--current">
+                        6 500 ₽
+                        <div class="price__period" title="Cентябрь — май">Сейчас</div>
+                    </div>
+                    <div class="price__value">
+                        12 500 ₽
+                        <div class="price__period">Лето</div>
+                    </div>
+                </div>
+                <div class="price__item">
+                    <div class="price__name">Выходные</div>
+                    <div class="price__value price__value--current">
+                        12 000 ₽
+                        <div class="price__period" title="Cентябрь — май">Сейчас</div>
+                    </div>
+                    <div class="price__value">
+                        18 000 ₽
+                        <div class="price__period">Лето</div>
+                    </div>
+                </div>
+                <div class="price__item">
+                    <div class="price__name">Двое суток (понедельник - четверг)</div>
+                    <div class="price__value price__value--current">
+                        12 000 ₽
+                        <div class="price__period" title="Cентябрь — май">Сейчас</div>
+                    </div>
+                    <div class="price__value">
+                        17 000 ₽
+                        <div class="price__period">Лето</div>
+                    </div>
+                </div>
+                <div class="price__item">
+                    <div class="price__name">5 дней, 4 ночи (понедельник - пятница)</div>
+                    <div class="price__value price__value--current">
+                        17 000 ₽
+                        <div class="price__period" title="Cентябрь — май">Сейчас</div>
+                    </div>
+                    <div class="price__value">
+                        29 000 ₽
+                        <div class="price__period">Лето</div>
+                    </div>
+                </div>
+                <div class="price__item">
+                    <div class="price__name">7 дней, 6 ночей (понедельник - воскресенье)</div>
+                    <div class="price__value price__value--current">
+                        25 000 ₽
+                        <div class="price__period" title="Cентябрь — май">Сейчас</div>
+                    </div>
+                    <div class="price__value">
+                        65 000 ₽
+                        <div class="price__period">Лето</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="price__footer">
             {% include '../../components/buttons/button.twig' with {
                 text: 'Забронировать',

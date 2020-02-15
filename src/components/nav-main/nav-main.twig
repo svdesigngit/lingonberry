@@ -1,9 +1,27 @@
 <nav class="nav-main">
+    <button class="nav-main__burger j-burger" data-nav="nav-main" data-list="nav-main__list">
+        <span class="nav-main__burger-inner">
+            <span></span>
+        </span>
+    </button>
     <ul class="nav-main__list">
         {% for item in items %}
             <li class="nav-main__item{% if item.active %} nav-main__item--active{% endif %}">
                 <a href="{{ item.link }}" class="nav-main__link">{{ item.name }}</a>
             </li>
         {% endfor %}
+        <li class="nav-main__item nav-main__item--mobile">
+            <div class="nav-main__mobile-contakt">
+                <a href="tel:+79817000170" class="nav-main__mobile-phone">+7 (981) 700-01-70</a>
+                <address  class="nav-main__mobile-address">77 км. Приозерского шоссе, <br>бывшая база отдыха «Климовец»</address>
+                {% include '../buttons/button.twig' with {
+                    text: 'Проложить маршрут',
+                    modify: 'btn--burger',
+                    tag: 'a',
+                    href: '#',
+                    active: true
+                }%}
+            </div>
+        </li>
     </ul>
 </nav>

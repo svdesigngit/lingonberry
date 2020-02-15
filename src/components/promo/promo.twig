@@ -1,30 +1,30 @@
 <section class="promo">
-    <div class="promo__slider">
-        <hooper>
-            {% for slide in slides %}
-                <slide>
-                    <div class="promo__slider-item">
-                        <div class="promo__slider-img">
-                            <img src="{{ slide.img }}" alt="{{ slide.header }}">
-                        </div>
-                        <div class="promo__slider-caption">
-                            <h2 class="promo__slider-header">{{ slide.header }}</h2>
-                            {% if slide.description %}
-                                <div class="promo__slider-text">{{ slide.description }}</div>
-                            {% endif %}
-                            {% if slide.button %}
-                                {% include '../buttons/button.twig' with {
-                                    text: slide.button.name,
-                                    modify: 'btn--promo',
-                                    tag: 'button',
-                                    active: true,
-                                    vueClick: "openPopup('modalForm')"
-                                }%}
-                            {% endif %}
-                        </div>
-                    </div>
-                </slide>
-            {% endfor %}
-        </hooper>
+    <div class="promo__slider j-slider">
+        {% for slide in slides %}
+            <div class="promo__slider-item">
+                <div class="promo__slider-img">
+                    <img src="{{ slide.img }}" alt="{{ slide.header }}">
+                </div>
+                <div class="promo__slider-caption">
+                    <h2 class="promo__slider-header">{{ slide.header }}</h2>
+                    {% if slide.description %}
+                        <div class="promo__slider-text">{{ slide.description }}</div>
+                    {% endif %}
+                    {% if slide.button %}
+                        {% include '../buttons/button.twig' with {
+                            text: slide.button.name,
+                            modify: 'btn--promo',
+                            tag: 'button',
+                            active: true,
+                            vueClick: "openPopup('modalForm')"
+                        }%}
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
     </div>
+    <modal-window ref="modalText">
+        <template slot="title">Текстовый попап</template>
+        <template slot="body">Дофига текста</template>
+    </modal-window>
 </section>

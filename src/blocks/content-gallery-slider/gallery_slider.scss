@@ -1,0 +1,187 @@
+.gallery-slider {
+  padding: rhythm(5) 0;
+  background-color: $gray-lighten;
+
+  @media #{$tablet-landscape} {
+    padding: rhythm(20) 0;
+  }
+}
+
+.gallery-slider__item {
+  position: relative;
+}
+
+.gallery-slider__caption {
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  right: 25px;
+  z-index: 1;
+  opacity: 0;
+
+  @include transition();
+
+  @media #{$tablet-landscape} {
+    top: 50px;
+    bottom: auto;
+    left: 50px;
+  }
+}
+
+.gallery-slider__header {
+  color: $white;
+  font-size: 1.6rem;
+
+  @media #{$tablet-landscape} {
+    font-size: 2.2rem;
+  }
+
+  @media #{$tablet} {
+    padding-top: rhythm(10);
+    @include font-size(h1);
+  }
+}
+
+.gallery-slider__text {
+  display: none;
+
+  @media #{$tablet-landscape} {
+    display: block;
+    font-size: 1.8rem;
+    color: $white;
+  }
+}
+
+
+.gallery-slider__img  {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+  margin: 0 10px;
+
+  @media #{$tablet-landscape} {
+    margin: 40px;
+  }
+
+  @media #{$desktop} {
+    margin: 60px;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: 56.6%;
+
+    @include transition();
+
+    @media #{$tablet-landscape} {
+      padding-top: 53.6%;
+    }
+    @media #{$desktop} {
+      padding-top: 52.6%;
+    }
+  }
+
+  @include transition();
+
+  img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+  }
+}
+
+.slick-center {
+  .gallery-slider__img  {
+
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 56.6%;
+    }
+
+    @media #{$tablet-landscape} {
+      margin: 0;
+    }
+  }
+
+  .gallery-slider__caption {
+    opacity: 1;
+  }
+}
+
+.gallery-slider__arrows {
+  width:  90px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  .slick-prev,
+  .slick-next {
+    position: relative;
+    border: none;
+    height: 12px;
+    width: 15px;
+    font-size: 0;
+
+    @include transition();
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+
+    &:before {
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid $gray-dark;
+      border-left: 2px solid $gray-dark;
+    }
+
+    &:after {
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $gray-dark;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .slick-prev {
+    &:before {
+      left: 0;
+      transform: rotate(-45deg);
+    }
+  }
+
+  .slick-next {
+    &:before {
+      right: 0;
+      transform: rotate(135deg);
+    }
+  }
+
+  @media #{$desktop} {
+    margin-top: rhythm(10);
+  }
+}

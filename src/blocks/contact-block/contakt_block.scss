@@ -1,20 +1,45 @@
 .contact-block {
-  padding: rhythm(20) 0;
+  padding: rhythm(5) 0;
   background-color: $gray-lightest;
+
+  @media #{$tablet} {
+    padding: rhythm(20) 0;
+  }
 }
 
 .contact-block__inner {
-  @include column(28);
+  @include column(32);
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
+
+  @media #{$tablet} {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.contact-block__title {
+  flex-basis: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin-bottom: rhythm(10);
 }
 
 .contact-block__map {
-  @include column(16.5);
+  height: 50vh;
+  min-height: 400px;
+
+  @media #{$tablet} {
+    @include column(16.5);
+  }
 }
 
 .contact-block__description {
-  @include column(16.5);
+  @media #{$tablet} {
+    @include column(16.5);
+  }
 }
 
 .contact-block__footer {

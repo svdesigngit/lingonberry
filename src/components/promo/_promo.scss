@@ -58,6 +58,11 @@
   @include column(28, 36);
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
   margin: auto;
 }
 
@@ -82,149 +87,103 @@
   }
 }
 
-.hooper-slide {
-  flex-shrink: 0;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  background-color: aquamarine;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hooper-progress {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 4px;
-  background-color: #efefef;
-}
-.hooper-progress-inner {
-  height: 100%;
-  background-color: #4285f4;
-  transition: 300ms;
-}
-.hooper-pagination {
-  position: absolute;
-  bottom: 0;
-  right: 50%;
-  transform: translateX(50%);
-  display: flex;
-  padding: 5px 10px;
-}
-.hooper-indicators {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.hooper-indicator:hover,
-.hooper-indicator.is-active {
-  background-color: #4285f4;
-}
-.hooper-indicator {
-  margin: 0 2px;
-  width: 12px;
-  height: 4px;
-  border-radius: 4px;
-  border: none;
-  padding: 0;
-  background-color: #fff;
-  cursor: pointer;
-}
-.hooper-pagination.is-vertical {
-  bottom: auto;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.hooper-pagination.is-vertical .hooper-indicators {
-  flex-direction: column;
-}
-.hooper-pagination.is-vertical .hooper-indicator {
-  width: 6px;
-}
-.hooper-next,
-.hooper-prev {
-  background-color: transparent;
-  border: none;
-  padding: 1em;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-.hooper-next.is-disabled,
-.hooper-prev.is-disabled {
-  opacity: 0.3;
-  cursor: not-allowed;
-}
-.hooper-next {
-  right: 0;
-}
-.hooper-prev {
-  left: 0;
-}
-.hooper-navigation.is-vertical .hooper-next {
-  top: auto;
-  bottom: 0;
-  transform: initial;
-}
-.hooper-navigation.is-vertical .hooper-prev {
-  top: 0;
-  bottom: auto;
-  right: 0;
-  left: auto;
-  transform: initial;
-}
-.hooper-navigation.is-rtl .hooper-prev {
-  left: auto;
-  right: 0;
-}
-.hooper-navigation.is-rtl .hooper-next {
-  right: auto;
-  left: 0;
-}
-.hooper {
+/* Slider */
+
+.slick-slider {
   position: relative;
+  display: block;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
 }
-.hooper * {
-  box-sizing: border-box;
-}
-.hooper-list {
+.slick-list {
+  position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-.hooper-track {
-  display: flex;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  padding: 0;
+  display: block;
   margin: 0;
-}
-.hooper.is-vertical .hooper-track {
-  flex-direction: column;
-  height: 200px;
-}
-
-.hooper.is-rtl {
-  direction: rtl;
-}
-
-.hooper-sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
   padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.dragging {
+    cursor: pointer;
+    cursor: hand;
+  }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  [dir="rtl"] & {
+    float: right;
+  }
+  img {
+    display: block;
+  }
+  &.slick-loading img {
+    display: none;
+  }
+
+  display: none;
+
+  &.dragging img {
+    pointer-events: none;
+  }
+
+  .slick-initialized & {
+    display: block;
+  }
+
+  .slick-loading & {
+    visibility: hidden;
+  }
+
+  .slick-vertical & {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+  }
+}
+.slick-arrow.slick-hidden {
+  display: none;
 }

@@ -1,24 +1,46 @@
 .content-property {
-  padding: rhythm(20) 0;
-}
+  @include column(32);
 
-.content-property__inner {
-  @include column(28);
   margin: 0 auto;
+  padding: rhythm(5) 0;
+
+  @media #{$tablet} {
+    @include column(34);
+
+    padding: rhythm(10) 0;
+  }
+
+  @media #{$desktop} {
+    @include column(28);
+  }
 }
 
 .content-property__text {
-  @include column(17);
   @include font-size('small');
+
+  @media #{$tablet} {
+    @include column(20);
+  }
+
+  @media #{$desktop} {
+    @include column(17);
+  }
 }
 
 .content-property__description {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+
+  @media #{$tablet} {
+    flex-direction: row;
+  }
 }
 
 .content-property__col {
-  @include column(16.5);
+  @media #{$tablet} {
+    @include column(16.5);
+  }
 }
 
 .content-property__footer {

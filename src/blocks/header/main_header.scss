@@ -1,9 +1,30 @@
+$headerMobileHeight: 60px;
+$headerDesktopHeight: 80px;
+
 .main-header {
-  padding-top: rhythm(3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  padding: rhythm(3) column(1.5, 36);
+  height: $headerMobileHeight;
+  background-color: $white;
+
+  @media #{$desktop} {
+    position: relative;
+    height: $headerDesktopHeight;
+    padding: rhythm(3) 0;
+  }
 }
 
 .main-header__inner {
     display: flex;
-    width: column(28);
+    width: column(36);
+    height: 100%;
     margin: 0 auto;
+
+    @media #{$desktop} {
+      width: column(28);
+    }
 }

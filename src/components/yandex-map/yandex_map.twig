@@ -1,0 +1,22 @@
+<script src='//api-maps.yandex.ru/2.1-dev/?lang=ru-RU&load=package.full' type='text/javascript'></script>
+<script>
+  var styles = {
+    iconLayout: 'default#image',
+    iconImageHref: '/img/location_point.svg', // картинка иконки
+    iconImageSize: [40, 58], // размеры картинки
+    iconImageOffset: [-20, -48]// смещение картинки
+  };
+
+  ymaps.ready(function () {
+    var myMap = new ymaps.Map('YMapsID_1', {
+      center: [60.68244402159126,30.05355390148244],
+      zoom: 12,
+      controls: ['smallMapDefaultSet'],
+      behaviors: ['drag','DblClickZoom','MultiTouch']
+    });
+    var myPlacemark_1 = new ymaps.Placemark([60.68244402159126,30.05355390148244], {
+      balloonContent: 'Преозерское шоссе 77'
+    }, styles);
+    myMap.geoObjects.add(myPlacemark_1);
+  });
+</script>

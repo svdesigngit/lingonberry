@@ -1,11 +1,149 @@
 .main-footer {
-  padding-top: rhythm(3);
   background-color: $gray-darken;
-  padding: rhythm(15) 0;
+  padding: rhythm(10) 0;
+
+  @media #{$tablet} {
+    padding: rhythm(15) 0;
+  }
 }
 
 .main-footer__inner {
+  @include column(32);
+
   display: flex;
-  width: column(28);
+  flex-direction: column;
   margin: 0 auto;
+
+  @media #{$tablet} {
+    @include column(34);
+
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  @media #{$desktop} {
+    @include column(28);
+  }
+}
+
+.main-footer__nav {
+  display: flex;
+
+  @media #{$tablet} {
+    @include column(18, 34);
+  }
+
+  @media #{$tablet-landscape} {
+    @include column(24, 34);
+  }
+
+  @media #{$desktop} {
+    @include column(20, 28);
+  }
+}
+
+.main-footer__nav-list {
+  @include list-normalize;
+
+  padding-right: rhythm(5);
+
+  &:last-child{
+    padding-right: 0;
+  }
+
+  @media #{$desktop} {
+    padding-right: rhythm(10);
+  }
+}
+
+.main-footer__nav-item {
+  @include list-li-normalize;
+
+  padding: rhythm(2);
+}
+
+.main-footer__link {
+  color: $white;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.main-footer__contact {
+  padding-top: rhythm(10);
+
+  @media #{$tablet} {
+    @include column(14, 34);
+    padding-top: 0;
+  }
+
+  @media #{$tablet-landscape} {
+    @include column(10, 34);
+  }
+
+  @media #{$desktop} {
+    @include column(8, 28);
+  }
+}
+
+.main-footer__contact-item {
+  @media #{$tablet} {
+    text-align: right;
+  }
+}
+
+.main-footer__phone {
+  display: inline-block;
+  margin-bottom: rhythm(6);
+  font-size: 3rem;
+  color: $gray-light;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+  }
+
+  @media #{$desktop} {
+    font-size: 3.6rem;
+    text-align: right;
+  }
+}
+
+.main-footer__address {
+  color: $white;
+
+  @media #{$desktop} {
+    text-align: right;
+  }
+}
+
+.main-footer__copyright {
+  @include column(1,1);
+
+  display: flex;
+  flex-direction: column;
+  margin-top: rhythm(6);
+  padding-top: rhythm(5);
+  border-top: 1px solid $gray-light;
+  color: $gray-light;
+
+  @media #{$tablet} {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.main-footer__copyright-dev {
+  a {
+    color: $gray-light;
+    text-decoration: underline;
+
+    &:hover {
+      color: $white;
+    }
+  }
 }

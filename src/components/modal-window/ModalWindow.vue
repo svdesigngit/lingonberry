@@ -5,9 +5,7 @@
       <h2 class='modal__title'>
         <slot name="title"></slot>
       </h2>
-      <slot name="description"></slot>
-      <slot name="body"></slot>
-      <slot name="footer"></slot>
+
     </div>
   </div>
 </template>
@@ -35,11 +33,6 @@
     },
   }
 </script>
-
-<style scoped>
-
-</style>
-
 
 
 

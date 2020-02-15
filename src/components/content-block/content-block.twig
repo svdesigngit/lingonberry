@@ -5,21 +5,23 @@
     <div class="content-block__description">
         <h3 class="content-block__header">{{ header }}</h3>
         <div class="content-block__text">{{ text }}</div>
-        <div class="content-block__footer {{ footerModify }}">
-            {% if button %}
-                {% include '../buttons/button.twig' with {
-                    text: button.name,
-                    modify: 'btn--default',
-                    tag: 'a',
-                    href: '#',
-                    active: true
-                }%}
-            {% endif %}
-            {% if decor %}
-                <div class="content-block__decor{{ decor.modify }}">
-                    <img src="{{ decor.img }}" alt="">
-                </div>
-            {% endif %}
-        </div>
+        {% if button or decor %}
+            <div class="content-block__footer {{ footerModify }}">
+                {% if button %}
+                    {% include '../buttons/button.twig' with {
+                        text: button.name,
+                        modify: 'btn--default',
+                        tag: 'a',
+                        href: '#',
+                        active: true
+                    }%}
+                {% endif %}
+                {% if decor %}
+                    <div class="content-block__decor{{ decor.modify }}">
+                        <img src="{{ decor.img }}" alt="">
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
     </div>
 </article>

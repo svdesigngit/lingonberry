@@ -1,18 +1,31 @@
 <template>
-    <hooper>
-        <slide>
-            slide 1
-        </slide>
-        <slide>
-            slide 2
-        </slide>
-        <slide>
-            slide 3
-        </slide>
-        <hooper-progress slot="hooper-addons"></hooper-progress>
-        <hooper-navigation slot="hooper-addons"></hooper-navigation>
-        <hooper-pagination slot="hooper-addons"></hooper-pagination>
-    </hooper>
+  <div>
+    <slide>
+      <div class="promo__slider-item">
+        <div class="promo__slider-img">
+          <img src="{{ slide.img }}" alt="{{ slide.header }}">
+        </div>
+        <div class="promo__slider-caption">
+          <h2 class="promo__slider-header">{{ slide.header }}</h2>
+          {% if slide.description %}
+          <div class="promo__slider-text">{{ slide.description }}</div>
+          {% endif %}
+          {% if slide.button %}
+          {% include '../buttons/button.twig' with {
+          text: slide.button.name,
+          modify: 'btn--promo',
+          tag: 'button',
+          active: true,
+          vueClick: "openPopup('modalForm')"
+          }%}
+          {% endif %}
+        </div>
+      </div>
+    </slide>
+    <hooper-progress slot="hooper-addons"></hooper-progress>
+    <hooper-navigation slot="hooper-addons"></hooper-navigation>
+    <hooper-pagination slot="hooper-addons"></hooper-pagination>
+  </div>
 </template>
 
 <script>
@@ -23,7 +36,6 @@
         Progress as HooperProgress,
         Navigation as HooperNavigation
     } from 'hooper';
-    // import 'hooper/dist/hooper.css';
 
     export default {
         name: 'hooper',
@@ -36,152 +48,3 @@
         }
     }
 </script>
-
-<style>
-    .hooper-slide {
-        flex-shrink: 0;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        background-color: aquamarine;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .hooper-progress {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        height: 4px;
-        background-color: #efefef;
-    }
-    .hooper-progress-inner {
-        height: 100%;
-        background-color: #4285f4;
-        transition: 300ms;
-    }
-    .hooper-pagination {
-        position: absolute;
-        bottom: 0;
-        right: 50%;
-        transform: translateX(50%);
-        display: flex;
-        padding: 5px 10px;
-    }
-    .hooper-indicators {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    .hooper-indicator:hover,
-    .hooper-indicator.is-active {
-        background-color: #4285f4;
-    }
-    .hooper-indicator {
-        margin: 0 2px;
-        width: 12px;
-        height: 4px;
-        border-radius: 4px;
-        border: none;
-        padding: 0;
-        background-color: #fff;
-        cursor: pointer;
-    }
-    .hooper-pagination.is-vertical {
-        bottom: auto;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .hooper-pagination.is-vertical .hooper-indicators {
-        flex-direction: column;
-    }
-    .hooper-pagination.is-vertical .hooper-indicator {
-        width: 6px;
-    }
-    .hooper-next,
-    .hooper-prev {
-        background-color: transparent;
-        border: none;
-        padding: 1em;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-    }
-    .hooper-next.is-disabled,
-    .hooper-prev.is-disabled {
-        opacity: 0.3;
-        cursor: not-allowed;
-    }
-    .hooper-next {
-        right: 0;
-    }
-    .hooper-prev {
-        left: 0;
-    }
-    .hooper-navigation.is-vertical .hooper-next {
-        top: auto;
-        bottom: 0;
-        transform: initial;
-    }
-    .hooper-navigation.is-vertical .hooper-prev {
-        top: 0;
-        bottom: auto;
-        right: 0;
-        left: auto;
-        transform: initial;
-    }
-    .hooper-navigation.is-rtl .hooper-prev {
-        left: auto;
-        right: 0;
-    }
-    .hooper-navigation.is-rtl .hooper-next {
-        right: auto;
-        left: 0;
-    }
-    .hooper {
-        position: relative;
-        box-sizing: border-box;
-        width: 100%;
-        height: 200px;
-    }
-    .hooper * {
-        box-sizing: border-box;
-    }
-    .hooper-list {
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-    }
-    .hooper-track {
-        display: flex;
-        box-sizing: border-box;
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-    }
-    .hooper.is-vertical .hooper-track {
-        flex-direction: column;
-        height: 200px;
-    }
-
-    .hooper.is-rtl {
-        direction: rtl;
-    }
-
-    .hooper-sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-    }
-</style>

@@ -1,11 +1,23 @@
 .content-block {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  padding: rhythm(10) 0;
+  padding: 0 0 rhythm(10);
+
+  &:last-child {
+    padding: 0;
+  }
+
+
+
+  @media #{$tablet} {
+    flex-direction: row;
+    padding: rhythm(10) 0;
+  }
 }
 
 .content-block__img {
-  @include column(16.5);
+  @include column(1, 1);
   position: relative;
   overflow: hidden;
   height: auto;
@@ -26,17 +38,35 @@
     height: 100%;
     object-fit: cover;
   }
+
+  @media #{$tablet} {
+    @include column(17);
+  }
+
+  @media #{$tablet-landscape} {
+    @include column(16.5);
+  }
 }
 
 .content-block__description {
-  @include column(16.5);
+  @include column(1, 1);
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media #{$tablet} {
+    @include column(17);
+  }
+
+  @media #{$tablet-landscape} {
+    @include column(16.5);
+  }
 }
 
 .content-block_revers {
-  flex-direction: row-reverse;
+  @media #{$tablet} {
+    flex-direction: row-reverse;
+  }
 }
 
 .content-block__header {
@@ -49,11 +79,18 @@
 
 .content-block__footer {
   position: relative;
-  padding-top: rhythm(8);
+  padding-top: rhythm(5);
+
+  @media #{$tablet} {
+    padding-top: rhythm(8);
+  }
 }
 
 .content-block__footer_revers {
-  flex-direction: row-reverse;
+
+  @media #{$tablet} {
+    flex-direction: row-reverse;
+  }
 }
 
 .content-block__decor {

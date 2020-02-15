@@ -1,33 +1,13 @@
 {% extends '../assets/layout/base.twig' %}
 
 {% block body %}
-    {% set title = 'Главная - home' %}
+    {% set title = 'Коттеджи - kottedj' %}
     {% set meta_d = 'Описание' %}
     {% set theme_color = '#007B3B' %}
 
 <div class="wrapper">
     {% include '../blocks/header/main_header.twig' %}
-    {% include '../components/promo/promo.twig' with {
-        slides: [
-            {
-                header: 'Лучший отдых на природе',
-                description: 'Вместе с загородным коттедж-клубом Брусника',
-                img: 'img/1.jpg',
-                button: {
-                    name: 'Забронировать'
-                }
-            },
-            {
-                header: 'Лучший отдых на природе',
-                description: 'Вместе с загородным коттедж-клубом Брусника',
-                img: 'img/2.jpg',
-                button: {
-                    name: 'Забронировать'
-                }
-            }
-        ]
-    }%}
-    {% include '../blocks/content-about/content_about.twig' %}
+    {% include '../blocks/content-kottedj/content-kottedj.twig' %}
     {% include '../blocks/price/price.twig' %}
     {% include '../blocks/content-gallery-slider/content_gallery_slider.twig' with {
         slides: [
@@ -55,8 +35,9 @@
         ]
     }
     %}
-    {% include '../blocks/content-entertainment/content_entertainment.twig' %}
-    {% include '../blocks/content-property/content_property.twig' %}
+    {% include '../blocks/content-in-kottedj/content-in-kottedj.twig' %}
+    {% include '../blocks/content-position/content_position.twig' %}
+    {% include '../blocks/content-manual/content_manual.twig' %}
     {% include '../blocks/contact-block/contact_block.twig' %}
 </div>
 

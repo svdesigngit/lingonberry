@@ -26,3 +26,16 @@
         cursor: pointer;
     }
 }
+
+.btn--burger {
+  @include column(1, 1);
+  display: flex;
+  background-color: transparent;
+  border-color: $white;
+  color: $white;
+
+  &:hover {
+    background-color: $white;
+    color: $text-color;
+  }
+}

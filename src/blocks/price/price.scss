@@ -1,66 +1,181 @@
 .price {
-  padding: rhythm(20) 0;
+  padding: rhythm(4) 0 rhythm(6);
   background-color: $gray-lightest;
-}
 
-.price__inner {
-  @include column(28);
-  margin: 0 auto;
-}
-
-.price__table{
-  width: 100%;
-
-  thead {
-    th {
-      @include font-size(h5);
-      padding: rhythm(5) 0;
-    }
-    tr:last-child {
-      background-color: $gray-light;
-
-      td,
-      th {
-        @include font-size(small);
-        padding: rhythm(2) 0;
-        border-bottom: rhythm(2) solid $gray-lightest;
-        text-align: center;
-      }
-    }
-  }
-
-  tbody {
-    tr {
-      @include transition(background-color);
-
-      td {
-        padding: rhythm(4) rhythm(5);
-        text-align: center;
-
-        &:first-child {
-          text-align: left;
-        }
-      }
-    }
-
-    tr:nth-child(odd) {
-      background-color: $white;
-    }
-
-    tr:hover {
-      background-color: rgba($color-main, .3);
-    }
-  }
-
-  @media #{$tablet-landscape} {
-    @include column(20, 28);
+  @media #{$tablet} {
+    padding: rhythm(8) 0;
   }
 
   @media #{$desktop} {
-    @include column(15, 28);
+    padding: rhythm(20) 0;
   }
 }
 
+.price__inner {
+  @include column(30);
+  margin: 0 auto;
+
+  @media #{$tablet} {
+    @include column(34);
+  }
+
+  @media #{$tablet-landscape} {
+    @include column(34);
+  }
+
+  @media #{$desktop} {
+    @include column(28);
+  }
+}
+
+
+.price__list {
+  @media #{$tablet-landscape} {
+    @include column(22 ,34);
+  }
+
+  @media #{$desktop} {
+    @include column(19);
+  }
+}
+
+.price__item {
+  display: flex;
+  flex-wrap: wrap;
+  padding: rhythm(4);
+  margin: 0 rhythm(-4);
+  border-bottom: rhythm(2) solid $gray-lightest;
+
+  &:nth-child(odd) {
+    background-color: $white;
+  }
+
+  &:hover {
+    background-color: rgba($color-main, .3);
+  }
+
+  @media #{$tablet} {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+}
+
+.price__header {
+  display: none;
+
+  @media #{$tablet-landscape} {
+    display: flex;
+  }
+}
+
+.price__name {
+  @include column(1, 1);
+
+  font-weight: $font-bold;
+  color: $gray-dark;
+  margin-bottom: rhythm(2);
+
+  @media #{$tablet} {
+    flex-grow: 1;
+  }
+}
+
+.price__value {
+  @include column(15, 30);
+
+  padding: 0 rhythm(2);
+  border-right: 1px solid $gray-light;
+  font-size: 1.3rem;
+
+  &:nth-child(2n) {
+    padding-left: 0;
+  }
+
+  &:nth-child(3n){
+    border-right: none;
+    padding-right: 0;
+  }
+
+  @media #{$tablet} {
+    @include column(10);
+  }
+
+  @media #{$tablet-landscape} {
+    @include column(5, 22);
+  }
+}
+
+.price__value--current {
+  font-size: 1.6rem;
+  font-weight: $font-bold;
+}
+
+.price__period {
+  font-size: 1.2rem;
+  font-weight: $font-regular;
+  color: $gray;
+  text-transform: uppercase;
+}
+
+
+//
+//.price__table{
+//  width: 100%;
+//
+//  thead {
+//    th {
+//      @include font-size(h5);
+//      padding: rhythm(5) 0;
+//    }
+//    tr:last-child {
+//      background-color: $gray-light;
+//
+//      td,
+//      th {
+//        @include font-size(small);
+//        padding: rhythm(2) 0;
+//        border-bottom: rhythm(2) solid $gray-lightest;
+//        text-align: center;
+//      }
+//    }
+//  }
+//
+//  tbody {
+//    tr {
+//      @include transition(background-color);
+//
+//      td {
+//        padding: rhythm(4) rhythm(5);
+//        text-align: center;
+//
+//        &:first-child {
+//          text-align: left;
+//        }
+//      }
+//    }
+//
+//    tr:nth-child(odd) {
+//      background-color: $white;
+//    }
+//
+//    tr:hover {
+//      background-color: rgba($color-main, .3);
+//    }
+//  }
+//
+//  @media #{$tablet-landscape} {
+//    @include column(20, 28);
+//  }
+//
+//  @media #{$desktop} {
+//    @include column(15, 28);
+//  }
+//}
+
 .price__footer {
-  padding-top: rhythm(10);
+  padding-top: rhythm(5);
+
+  @media #{$tablet-landscape} {
+    padding-top: rhythm(10);
+  }
 }

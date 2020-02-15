@@ -1,0 +1,25 @@
+.content-section {
+  padding: rhythm(5) 0;
+
+  @media #{$tablet} {
+    padding: rhythm(10) 0;
+  }
+}
+
+.content-section_gray {
+  background-color: $gray-lightest;
+}
+
+.content-section__container {
+  @include column(32);
+
+  margin: 0 auto;
+
+  @media #{$tablet} {
+    @include column(34);
+  }
+
+  @media #{$desktop} {
+    @include column(28);
+  }
+}

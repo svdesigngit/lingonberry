@@ -1,5 +1,18 @@
 .contakts-header {
-  padding-left: column(2);
+  flex-grow: 1;
+  margin-right: 80px;
+  order: 2;
+  white-space: nowrap;
+
+  @media #{$tablet-landscape} {
+    margin-right: 0;
+  }
+
+  @media #{$desktop} {
+    flex-grow: 0;
+    padding-left: column(2);
+    order: 3;
+  }
 }
 
 .contakts-header__item {

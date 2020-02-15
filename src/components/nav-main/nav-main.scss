@@ -1,21 +1,51 @@
+$navMainHeight: 60px;
+
 .nav-main {
-    flex-grow: 1;
-    display: flex;
-    justify-content: flex-end;
+    @media #{$mobile-only} {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      order: 3;
+    }
+
+    @media #{$tablet-landscape} {
+      display: flex;
+      justify-content: flex-end;
+      order: 2;
+      flex-grow: 1;
+    }
 }
 
 .nav-main__list {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    @include list-normalize;
+
+    @media #{$mobile-only} {
+      position: absolute;
+      width: 100vw;
+      height: 0;
+      visibility: hidden;
+      display: flex;
+      flex-direction: column;
+      background-color: $gray-darken;
+      padding-top: rhythm(5);
+      overflow: hidden;
+
+      @include transition();
+
+    }
+
+    @media #{$tablet-landscape} {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 0;
+    }
 }
 
 .nav-main__item {
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 rhythm(5);
     list-style: none;
     margin: 0;
 
@@ -25,9 +55,123 @@
 }
 
 .nav-main__link {
-    color: $black;
+    font-size: 2.4rem;
+    line-height: 2.4em;
+    color: $white;
+
+    @media #{$tablet-landscape} {
+      font-size: 1.4rem;
+      line-height: 1.5em;
+      color: $black;
+    }
 }
 
 .nav-main__item--active {
 
+}
+
+.nav-main__item--mobile {
+  display: block;
+  padding: rhythm(10) column(2);
+
+  @media #{$tablet} {
+    padding: rhythm(10) rhythm(5);
+  }
+  @media #{$tablet-landscape} {
+    display: none;
+  }
+}
+
+.nav-main__mobile-phone {
+  display: block;
+  font-size: 3rem;
+  color: $white;
+}
+
+.nav-main__mobile-address {
+  display: block;
+  padding: 0;
+  margin: rhythm(6) 0 rhythm(6);
+  color: $white;
+}
+
+
+.nav-main__burger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: $navMainHeight;
+  height: $navMainHeight;
+
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+
+  @include transition();
+
+  @media #{$tablet-landscape} {
+    display: none;
+  }
+ }
+
+.nav-main__burger-inner {
+  position: absolute;
+  top: rhythm(4.5);
+  left: 10px;
+  bottom: rhythm(4.5);
+  right: 10px;
+  width: auto;
+
+  @include transition();
+
+  &:before,
+  &:after,
+  & span {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: auto;
+    background-color: $gray-darken;
+
+    @include transition();
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  span {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+
+.nav-main__burger.is-active {
+  background-color: $gray-darken;
+
+  .nav-main__burger-inner {
+    transform: rotate(90deg);
+
+    &:before,
+    &:after,
+    & span {
+      background-color: $white;
+    }
+  }
+}
+
+.nav-main.is-active {
+}
+
+.nav-main__list.is-active {
+  visibility: visible;
+  height: calc(100vh - 60px);
 }

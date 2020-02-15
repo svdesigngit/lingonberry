@@ -1,8 +1,8 @@
 // стандартный transition
 // $property {String} свойство(а) которуе нужно анимировать
-@mixin transition($property: all) {
+@mixin transition($property: all, $time: 0.3s) {
     transition-property: $property;
-    transition-duration: 0.3s;
+    transition-duration: $time;
     transition-timing-function: ease-out;
 }
 
@@ -22,6 +22,33 @@
     &:after {
       content: none;
     }
+}
+
+@mixin list-all-normalize {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+    background: none;
+
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
+}
+
+@mixin button-reset {
+  border: none;
+  bakground: none;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 // Фильтры для эффектов

@@ -1,0 +1,18 @@
+<section class="gallery-slider">
+    <div class="gallery-slider__body j-slider-center">
+        {% for slide in slides %}
+            <div class="gallery-slider__item">
+                <div class="gallery-slider__img">
+                    <img src="{{ slide.img }}" alt="{{ slide.header }}">
+                </div>
+                <div class="gallery-slider__caption">
+                    <h2 class="gallery-slider__header">{{ slide.header }}</h2>
+                    {% if slide.description %}
+                        <div class="gallery-slider__text">{{ slide.description }}</div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="gallery-slider__arrows"></div>
+</section>
