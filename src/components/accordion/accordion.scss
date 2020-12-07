@@ -16,6 +16,7 @@
 .accordion__header {
   @include transition();
 
+  position: relative;
   padding: rhythm(5);
 
   &:hover {
@@ -76,5 +77,21 @@
 }
 
 .accordion__body {
-  display: none;
+  @include visibility-hidden;
+  @include transition(all, 0.2s);
+}
+
+.accordion__item-active {
+  & > .accordion__header {
+    background-color: rgba($color-main-light,  0.5);
+
+    .accordion__btn {
+      @include transition(transform, 0.2s);
+      transform: rotate(45deg);
+    }
+  }
+
+  & > .accordion__body {
+    @include visibility-visible;
+  }
 }

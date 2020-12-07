@@ -1,6 +1,7 @@
 // Import components
 import $ from 'jquery';
 import slickSlider from 'slick-carousel';
+import Accordion from '../../components/accordion';
 
 // Vue
 // import Vue from 'vue/dist/vue'
@@ -63,13 +64,12 @@ import slickSlider from 'slick-carousel';
 //   }
 // }).$mount('#app');
 
-
 // Slick slider
-(function (slickSliderContainer) {
+(function(slickSliderContainer) {
   if (!slickSliderContainer.length) {
     return;
   }
-  
+
   slickSliderContainer.slick({
     infinite: true,
     slidesToShow: 1,
@@ -84,11 +84,11 @@ import slickSlider from 'slick-carousel';
 })($('.j-slider'));
 
 // Slick slider
-(function (slickSliderContainer) {
+(function(slickSliderContainer) {
   if (!slickSliderContainer.length) {
     return;
   }
-  
+
   slickSliderContainer.slick({
     infinite: true,
     slidesToShow: 1,
@@ -111,25 +111,24 @@ import slickSlider from 'slick-carousel';
           centerMode: true,
           centerPadding: '20%',
           initialSlide: 1,
-          arrows: true,
+          arrows: true
         }
       }
     ]
   });
-  
 })($('.j-slider-center'));
 
 // Burger
-(function(burger){
+(function(burger) {
   if (!burger) {
     return;
   }
-  
-  burger.each(function(){
-    $(this).click(function(){
+
+  burger.each(function() {
+    $(this).click(function() {
       const nav = $(this).data('nav');
       const navList = $(this).data('list');
-      
+
       $(`.${nav}`).toggleClass('is-active');
       $(`.${navList}`).toggleClass('is-active');
       $(this).toggleClass('is-active');
@@ -138,17 +137,25 @@ import slickSlider from 'slick-carousel';
   });
 })($('.j-burger'));
 
-(function(accordion){
-    if (!accordion) {
-      return;
-    }
-    
-    accordion.each(function(){
-      $(this).click(function(event) {
-        console.log($(event.target));
-       //console.log(this);
-      })
-    })
-  }
-  
-)($('.j-accordion'));
+/**
+ * Аккордион
+ */
+const accordion = new Accordion();
+accordion.init({
+  selector: '.j-accordion',
+  activeClass: 'accordion__item-active',
+  closeOthers: true
+});
+
+// (function(accordion) {
+//   if (!accordion) {
+//     return;
+//   }
+//
+//   accordion.each(function() {
+//     $(this).click(function(event) {
+//       console.log($(event.target));
+//       console.log(this);
+//     });
+//   });
+// })($('.j-accordion'));
